@@ -1,0 +1,14 @@
+{
+  "name": "slider-button",
+  "dependencies": [
+    "framer-motion",
+    "shadcn"
+  ],
+  "files": [
+    {
+      "name": "slider-button.tsx",
+      "content": "'use client'\r\n\r\nimport { useState } from 'react'\r\nimport { Button } from \"@/components/ui/button\"\r\nimport { ArrowRight } from \"lucide-react\"\r\n\r\nexport default function SliderButton({ name1, name2, onClick }: { name1: string, name2: string, onClick: () => void }) {\r\n  const [isHovered, setIsHovered] = useState(false)\r\n\r\n  return (\r\n    <Button\r\n      className=\"relative overflow-hidden bg-background text-foreground hover:text-white border-2 border-primary px-6 py-3 rounded-md transition-all duration-300 ease-in-out group\"\r\n      onMouseEnter={() => setIsHovered(true)}\r\n      onMouseLeave={() => setIsHovered(false)}\r\n    >\r\n      <span className=\"relative z-10 flex items-center transition-transform duration-300 ease-in-out group-hover:-translate-x-5\">\r\n        <span className={`transition-opacity duration-300 ${isHovered ? 'opacity-0' : 'opacity-100'}`}>\r\n          {name1}\r\n        </span>\r\n        <span className={`absolute left-0 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>\r\n          {name2}\r\n        </span>\r\n        <ArrowRight className=\"ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-5\" />\r\n      </span>\r\n      <span className=\"absolute bottom-0 left-0 h-[2px] w-full bg-primary transform origin-left transition-transform duration-300 ease-out scale-x-0 group-hover:scale-x-100\" />\r\n    </Button>\r\n  )\r\n}"
+    }
+  ],
+  "type": "components:ui"
+}

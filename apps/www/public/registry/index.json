@@ -1,0 +1,75 @@
+[
+  {
+    "name": "minimal-card",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/minimal-card.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "three-d-carousel",
+    "dependencies": [
+      ""
+    ],
+    "files": [
+      "ui/three-d-carousel.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "color-picker",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/color-picker.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "glass-button",
+    "dependencies": [
+      "shadcn"
+    ],
+    "files": [
+      "ui/glass-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "magical-button",
+    "dependencies": [
+      "framer-motion",
+      "shadcn"
+    ],
+    "files": [
+      "ui/magical-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "slide-button",
+    "dependencies": [
+      "framer-motion",
+      "shadcn"
+    ],
+    "files": [
+      "ui/slide-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "slider-button",
+    "dependencies": [
+      "framer-motion",
+      "shadcn"
+    ],
+    "files": [
+      "ui/slider-button.tsx"
+    ],
+    "type": "components:ui"
+  }
+]

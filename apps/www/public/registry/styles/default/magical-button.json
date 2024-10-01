@@ -1,0 +1,14 @@
+{
+  "name": "magical-button",
+  "dependencies": [
+    "framer-motion",
+    "shadcn"
+  ],
+  "files": [
+    {
+      "name": "magical-button.tsx",
+      "content": "'use client'\n\nimport { useEffect, useState } from \"react\"\nimport confetti from \"canvas-confetti\"\nimport { Loader2, Sparkles } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\n\ninterface ComponentProps {\n  buttonText: string\n}\n\nexport default function Test({\n  buttonText = \"Magical Button\",\n}: ComponentProps) {\n  const [isHovered, setIsHovered] = useState(false)\n  const [isLoading, setIsLoading] = useState(false)\n\n  const handleClick = () => {\n    setIsLoading(true)\n    confetti({\n      particleCount: 100,\n      spread: 70,\n      origin: { y: 0.6 },\n    })\n    setTimeout(() => {\n      setIsLoading(false)\n    }, 2000)\n  }\n\n  useEffect(() => {\n    // Cleanup function to cancel any ongoing confetti animations\n    return () => {\n      confetti.reset()\n    }\n  }, [])\n\n  return (\n    <Button\n      className=\"relative overflow-hidden bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg\"\n      onMouseEnter={() => setIsHovered(true)}\n      onMouseLeave={() => setIsHovered(false)}\n      onClick={handleClick}\n      disabled={isLoading}\n    >\n      <span className=\"relative z-10 flex items-center\">\n        {isLoading ? (\n          <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />\n        ) : (\n          <Sparkles className=\"mr-2 h-4 w-4\" />\n        )}\n        {buttonText}\n      </span>\n      <span\n        className={`absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 transition-opacity duration-300 ease-in-out ${\n          isHovered ? \"opacity-100\" : \"opacity-0\"\n        }`}\n      />\n      <span className=\"absolute inset-0 bg-white opacity-25 animate-pulse\" />\n    </Button>\n  )\n}\n"
+    }
+  ],
+  "type": "components:ui"
+}
