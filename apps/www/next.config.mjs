@@ -22,8 +22,14 @@ const nextConfig = {
   // Remove the redirects function for static export
 }
 
-const withContentlayer = createContentlayerPlugin({
-  // Additional Contentlayer config options
-})
+const withContentlayer = (config) => {
+  try {
+    const { withContentlayer } = require('next-contentlayer');
+    return withContentlayer(config);
+  } catch (error) {
+    console.warn('Warning: next-contentlayer is not installed. Skipping.');
+    return config;
+  }
+};
 
 export default withContentlayer(nextConfig)
