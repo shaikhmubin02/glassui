@@ -3,6 +3,8 @@ import { createContentlayerPlugin } from "next-contentlayer"
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: "export",
+  distDir: "public",
   swcMinify: true,
   images: {
     remotePatterns: [
@@ -24,12 +26,12 @@ const nextConfig = {
     return [
       {
         source: "/components",
-        destination: "/docs/components/dynamic-island",
+        destination: "/docs/components/slide-button",
         permanent: true,
       },
       {
         source: "/docs/components",
-        destination: "/docs/components/dynamic-island",
+        destination: "/docs/components/slide-button",
         permanent: true,
       },
     ]

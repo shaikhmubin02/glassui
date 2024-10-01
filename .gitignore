@@ -34,3 +34,10 @@ yarn-error.log*
 
 .contentlayer
 tsconfig.tsbuildinfo
+
+# Next.js
+/.next/
+/out/
+
+# Remove or comment out any line ignoring the public directory
+# /public
