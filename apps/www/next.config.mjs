@@ -4,9 +4,10 @@ import { createContentlayerPlugin } from "next-contentlayer"
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
-  distDir: "public",
+  distDir: "out", // Changed from "public" to "out"
   swcMinify: true,
   images: {
+    unoptimized: true, // Add this line for static export
     remotePatterns: [
       {
         protocol: "https",
@@ -16,26 +17,9 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com/random/*",
-      },
     ],
   },
-  redirects() {
-    return [
-      {
-        source: "/components",
-        destination: "/docs/components/slide-button",
-        permanent: true,
-      },
-      {
-        source: "/docs/components",
-        destination: "/docs/components/slide-button",
-        permanent: true,
-      },
-    ]
-  },
+  // Remove the redirects function for static export
 }
 
 const withContentlayer = createContentlayerPlugin({
