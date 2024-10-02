@@ -43,4 +43,10 @@ export const examples: Registry = [
     registryDependencies: ["remove-button"],
     files: ["example/remove-button-demo.tsx"],
   },
+  {
+    name: "gradient-button-demo",
+    type: "components:example",
+    registryDependencies: ["gradient-button"],
+    files: ["example/gradient-button-demo.tsx"],
+  },
 ]

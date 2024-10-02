@@ -66,6 +66,11 @@ export const docsConfig: DocsConfig = {
               href: "/docs/components/slider-button",
               items: [],
             },
+            {
+              title: "Gradient Button",
+              href: "/docs/components/gradient-button",
+              items: [],
+            },
           ],
         },
         {

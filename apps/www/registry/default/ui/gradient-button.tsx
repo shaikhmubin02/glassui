@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export default function HoverBorderGradient({
+export default function GradientButton({
   children,
   containerClassName,
   className,

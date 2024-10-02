@@ -82,6 +82,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "gradient-button": {
+      name: "gradient-button",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/gradient-button")),
+      source: "",
+      files: ["registry/default/ui/gradient-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "minimal-card-demo": {
       name: "minimal-card-demo",
       type: "components:example",
@@ -155,6 +166,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/remove-button-demo")),
       source: "",
       files: ["registry/default/example/remove-button-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "gradient-button-demo": {
+      name: "gradient-button-demo",
+      type: "components:example",
+      registryDependencies: ["gradient-button"],
+      component: React.lazy(() => import("@/registry/default/example/gradient-button-demo")),
+      source: "",
+      files: ["registry/default/example/gradient-button-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

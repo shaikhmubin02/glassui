@@ -43,4 +43,10 @@ export const ui: Registry = [
     dependencies: ["shadcn"],
     files: ["ui/remove-button.tsx"],
   },
+  {
+    name: "gradient-button",
+    type: "components:ui",
+    dependencies: ["shadcn"],
+    files: ["ui/gradient-button.tsx"],
+  },
 ]

@@ -1,0 +1,80 @@
+---
+title: Gradient Button
+description: A stylish button with a dynamic gradient background and hover effects
+component: true
+links:
+---
+
+<ComponentPreview
+  name="gradient-button-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Gradient Button Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="gradient-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import GradientButton from "@/components/ui/gradient-button"
+```
+
+```tsx
+import Image from 'next/image'
+
+export default function GradientButtonDemo() {
+  return (
+    <div className="flex justify-center items-center">
+      <GradientButton
+        containerClassName="rounded-full"
+        as="button"
+        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+      >
+        <Image src="/glassui.png" alt="logo" width={16} height={16} />
+        <span>Glass UI</span>
+      </GradientButton>
+    </div>
+  )
+}
+```
+
+## Props
+
+The `GradientButton` component accepts the following props:
+
+- `children` (React.ReactNode): The content to be displayed inside the button.
+- `containerClassName` (string, optional): Additional classes for the outer container of the button.
+- `className` (string, optional): Additional classes for the inner content of the button.
+- `as` (React.ElementType, optional): The HTML element or component to render the button as. Defaults to "button".
+
+The component also accepts all standard HTML attributes for the specified element type.
+
+## Features
+
+- Dynamic gradient background with rainbow colors
+- Hover effect that increases opacity and scale
+- Customizable content with support for text and images
+- Responsive design with smooth transitions
+- Dark mode support
