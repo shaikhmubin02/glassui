@@ -14,7 +14,7 @@ export function SiteFooter() {
           </a>
           . The source code is available on{" "}
           <a
-            href="https://github.com/shaikhmubin02/"
+            href="https://github.com/shaikhmubin02/glassui"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"

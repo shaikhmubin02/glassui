@@ -14,7 +14,7 @@ export function Announcement() {
   const pathname = usePathname()
   return (
     <Link
-      href="/docs/components"
+      href="/docs/components/slide-button"
           className={cn(
             "group inline-flex items-center rounded-lg border border-black/10 bg-transparent px-3 py-1 text-sm font-medium text-neutral-800 shadow-sm",
             pathname?.startsWith("/docs/components")

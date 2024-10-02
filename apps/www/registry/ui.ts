@@ -37,4 +37,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion", "shadcn"],
     files: ["ui/slider-button.tsx"],
   },
+  {
+    name: "remove-button",
+    type: "components:ui",
+    dependencies: ["shadcn"],
+    files: ["ui/remove-button.tsx"],
+  },
 ]

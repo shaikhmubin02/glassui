@@ -56,10 +56,15 @@ export const docsConfig: DocsConfig = {
               items: [],
             },
             {
+              title: "Remove Button",
+              href: "/docs/components/remove-button",
+              items: [],
+              label: "new",
+            },
+            {
               title: "Slider Button",
               href: "/docs/components/slider-button",
               items: [],
-              label: "new",
             },
           ],
         },

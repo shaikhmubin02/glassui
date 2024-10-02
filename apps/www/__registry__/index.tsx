@@ -71,6 +71,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "remove-button": {
+      name: "remove-button",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/remove-button")),
+      source: "",
+      files: ["registry/default/ui/remove-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "minimal-card-demo": {
       name: "minimal-card-demo",
       type: "components:example",
@@ -133,6 +144,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/slider-button-demo")),
       source: "",
       files: ["registry/default/example/slider-button-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "remove-button-demo": {
+      name: "remove-button-demo",
+      type: "components:example",
+      registryDependencies: ["remove-button"],
+      component: React.lazy(() => import("@/registry/default/example/remove-button-demo")),
+      source: "",
+      files: ["registry/default/example/remove-button-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

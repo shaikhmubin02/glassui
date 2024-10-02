@@ -1,0 +1,78 @@
+---
+title: Remove Button
+description: A stylish button with confirmation dialog for removing items
+component: true
+links:
+---
+
+<ComponentPreview
+  name="remove-button-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Remove Button Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="remove-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import RemoveButton from "@/components/ui/remove-button"
+```
+
+```tsx
+export default function RemoveButtonDemo() {
+  return (
+    <div className="flex flex-col items-center justify-center">
+      <RemoveButton />
+    </div>
+  )
+}
+```
+
+## Features
+
+The `RemoveButton` component includes the following features:
+
+- Stylish design with hover effects
+- Confirmation dialog to prevent accidental removals
+- Loading state while the removal is in progress
+- Success state after the item is removed
+- Shake animation when clicked (before opening the dialog)
+- Toast notification upon successful removal
+
+## Customization
+
+The `RemoveButton` component uses Tailwind CSS classes for styling. You can customize its appearance by modifying the classes in the component's source code.
+
+## Dependencies
+
+This component relies on the following dependencies:
+
+- `@/components/ui/button`
+- `@/components/ui/alert-dialog`
+- `@/components/ui/use-toast`
+- `lucide-react` for icons
+
+Make sure these dependencies are installed and properly imported in your project.

@@ -67,7 +67,7 @@ export function ComponentPreview({
 
   return (
     <div
-      className={cn("group relative my-4 flex flex-col space-y-2", className)}
+      className={cn("relative my-4 flex flex-col space-y-2", className)}
       {...props}
     >
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
@@ -102,31 +102,9 @@ export function ComponentPreview({
             </div>
           </div>
           <ThemeWrapper defaultTheme="zinc">
-            {/* <div
-              className={cn(
-                "preview flex min-h-[350px] w-full justify-center bg-white p-3 md:p-10 dark:bg-neutral-950",
-                {
-                  "items-center": align === "center",
-                  "items-start": align === "start",
-                  "items-end": align === "end",
-                }
-              )}
-            >
-              <React.Suspense
-                fallback={
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-                    Loading...
-                  </div>
-                }
-              >
-                {Preview}
-              </React.Suspense>
-            </div> */}
-
             <div
               className={cn(
-                "preview flex min-h-[350px] w-full justify-center bg-white p-3 md:p-10 dark:bg-neutral-950",
+                "preview flex min-h-[350px] w-full justify-center bg-white p-3 md:p-10 dark:bg-neutral-950 mb-8",
                 {
                   "items-center": align === "center",
                   "items-start": align === "start",
