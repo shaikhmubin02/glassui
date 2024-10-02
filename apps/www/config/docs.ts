@@ -43,12 +43,12 @@ export const docsConfig: DocsConfig = {
               title: "Glass Button",
               href: "/docs/components/glassbutton",
               items: [],
-              label: "new",
             },
             {
               title: "Magical Button",
               href: "/docs/components/magical-button",
               items: [],
+              label: "new",
             },
             {
               title: "Slide Button",
@@ -58,6 +58,11 @@ export const docsConfig: DocsConfig = {
             {
               title: "Remove Button",
               href: "/docs/components/remove-button",
+              items: [],
+            },
+            {
+              title: "Particle Button",
+              href: "/docs/components/particle-button",
               items: [],
               label: "new",
             },

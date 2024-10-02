@@ -93,6 +93,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "particle-button": {
+      name: "particle-button",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/particle-button")),
+      source: "",
+      files: ["registry/default/ui/particle-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "minimal-card-demo": {
       name: "minimal-card-demo",
       type: "components:example",
@@ -181,5 +192,16 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "particle-button-demo": {
+      name: "particle-button-demo",
+      type: "components:example",
+      registryDependencies: ["particle-button"],
+      component: React.lazy(() => import("@/registry/default/example/particle-button-demo")),
+      source: "",
+      files: ["registry/default/example/particle-button-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    }
   },
 }

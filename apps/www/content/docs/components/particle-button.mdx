@@ -1,0 +1,77 @@
+---
+title: Particle Button
+description: A stylish button with animated particle effects
+component: true
+links:
+---
+
+<ComponentPreview
+  name="particle-button-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Particle Button Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="particle-button" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import ParticleButton from "@/components/ui/particle-button"
+```
+
+```tsx
+export default function ParticleButtonDemo() {
+  return (
+    <div className="flex flex-col items-center justify-center">
+      <ParticleButton>Glass UI</ParticleButton>
+    </div>
+  )
+}
+```
+
+## Props
+
+The `ParticleButton` component accepts the following props:
+
+- `children` (React.ReactNode): The content to display inside the button.
+- `className` (string, optional): Additional CSS classes to apply to the button.
+- `particleCount` (number, optional): The number of particles to render. Default is 50.
+- `particleColors` (string[], optional): An array of colors for the particles. Default is `['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8']`.
+
+## Customization
+
+You can customize the appearance and behavior of the Particle Button by adjusting the props:
+
+```tsx
+<ParticleButton
+  className="bg-blue-500 text-white"
+  particleCount={100}
+  particleColors={['#FFD700', '#FF69B4', '#00CED1']}
+>
+  Custom Particle Button
+</ParticleButton>
+```
+
+This example creates a blue button with white text and 100 particles in gold, pink, and turquoise colors.

@@ -49,4 +49,10 @@ export const examples: Registry = [
     registryDependencies: ["gradient-button"],
     files: ["example/gradient-button-demo.tsx"],
   },
+  {
+    name: "particle-button-demo",
+    type: "components:example",
+    registryDependencies: ["particle-button"],
+    files: ["example/particle-button-demo.tsx"],
+  },
 ]
