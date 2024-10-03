@@ -104,6 +104,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "network-background": {
+      name: "network-background",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/network-background")),
+      source: "",
+      files: ["registry/default/ui/network-background.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "minimal-card-demo": {
       name: "minimal-card-demo",
       type: "components:example",
@@ -202,6 +213,17 @@ export const Index: Record<string, any> = {
       category: "undefined",
       subcategory: "undefined",
       chunks: []
-    }
-  },
+    },
+    "network-background-demo": {
+      name: "network-background-demo",
+      type: "components:example",
+      registryDependencies: ["network-background"],
+      component: React.lazy(() => import("@/registry/default/example/network-background-demo")),
+      source: "",
+      files: ["registry/default/example/network-background-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+  }
 }

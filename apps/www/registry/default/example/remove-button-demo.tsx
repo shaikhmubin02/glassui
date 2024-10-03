@@ -2,12 +2,15 @@
 
 import React from "react"
 import RemoveButton from "../ui/remove-button"
+import { Card } from "@/components/ui/card"
 
 const RemoveButtonDemo = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <RemoveButton />
-    </div>
+    <Card className="relative w-full h-[300px] shadow-md dark:bg-gray-950 dark:text-white">
+      <div className="flex flex-col items-center justify-center h-full">
+        <RemoveButton />
+      </div>
+    </Card>
   )
 }
 

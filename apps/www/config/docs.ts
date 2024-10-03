@@ -88,6 +88,16 @@ export const docsConfig: DocsConfig = {
             },
           ],
         },
+        {
+          title: "Backgrounds",
+          items: [
+            {
+              title: "Network Background",
+              href: "/docs/components/network-background",
+              items: [],
+            },
+          ],
+        },
       ],
     },
   ],

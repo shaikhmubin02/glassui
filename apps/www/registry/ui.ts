@@ -55,4 +55,10 @@ export const ui: Registry = [
     dependencies: ["shadcn"],
     files: ["ui/particle-button.tsx"],
   },
+  {
+    name: "network-background",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/network-background.tsx"],
+  },
 ]

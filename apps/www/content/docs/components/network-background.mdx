@@ -1,0 +1,79 @@
+---
+title: Network Background
+description: A dynamic network-style background with animated particles and connections
+component: true
+links:
+---
+
+<ComponentPreview
+  name="network-background-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Network Background Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="network-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import NetworkBackground from "@/components/ui/network-background"
+```
+
+```tsx
+export default function NetworkBackgroundDemo() {
+  return (
+    <div className='relative min-h-screen'>
+      <NetworkBackground className="z-0" />
+      <div className='relative z-10 flex flex-col justify-center items-center min-h-screen text-black dark:text-white'>
+        <h1 className="text-4xl font-bold mb-4 text-gradient from-blue-500 to-purple-500">Glass UI</h1>
+        <p className="text-lg text-gray-500">Your one stop shop for all your UI needs</p>
+      </div>
+    </div>
+  )
+}
+```
+
+## Props
+
+The `NetworkBackground` component accepts the following props:
+
+- `className` (optional string): Additional CSS classes to apply to the component.
+
+## Features
+
+- Responsive canvas that adjusts to window size
+- Animated particles with connecting lines
+- Theme-aware coloring (adjusts to light/dark mode)
+- Smooth opacity animation on mount
+
+## Customization
+
+You can customize the Network Background by modifying the following parameters in the component:
+
+- `particleCount`: Number of particles in the background
+- `connectionDistance`: Maximum distance for particles to connect
+- `particleColor`: Color of the particles
+- `lineColor`: Color of the connecting lines (adjusts based on theme)
+- Background gradient: Modify the `bgClass` variable to change the background gradient
