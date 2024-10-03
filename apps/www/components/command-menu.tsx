@@ -56,32 +56,28 @@ export function CommandMenu({ ...props }: DialogProps) {
     command()
   }, [])
 
-  const renderItems = (items: any[]) => {
-    return items.map((item) => {
-      if (item.href) {
-        return (
-          <CommandItem
-            key={item.href}
-            value={item.title}
-            onSelect={() => {
-              runCommand(() => router.push(item.href as string))
-            }}
-          >
-            <div className="mr-2 flex h-4 w-4 items-center justify-center">
-              <CircleIcon className="h-3 w-3" />
-            </div>
-            {item.title}
-          </CommandItem>
-        )
-      } else if (item.items) {
-        return (
-          <CommandGroup key={item.title} heading={item.title}>
-            {renderItems(item.items)}
-          </CommandGroup>
-        )
-      }
-    })
-  }
+  const groupedItems = React.useMemo(() => {
+    const mainNavItems = docsConfig.mainNav.map(item => ({
+      ...item,
+      group: "Main Navigation"
+    }));
+
+    const sidebarItems = docsConfig.sidebarNav.flatMap(section => 
+      section.items.flatMap(category => 
+        category.items ? 
+          category.items.map(item => ({
+            ...item,
+            group: `${section.title} - ${category.title}`
+          })) :
+          [{
+            ...category,
+            group: section.title
+          }]
+      )
+    );
+
+    return [...mainNavItems, ...sidebarItems];
+  }, []);
 
   return (
     <>
@@ -103,25 +99,30 @@ export function CommandMenu({ ...props }: DialogProps) {
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Links">
-            {docsConfig.mainNav
-              .filter((navitem) => !navitem.external)
-              .map((navItem) => (
+          {Object.entries(
+            groupedItems.reduce((acc, item) => {
+              (acc[item.group] = acc[item.group] || []).push(item);
+              return acc;
+            }, {} as Record<string, typeof groupedItems>)
+          ).map(([group, items]) => (
+            <CommandGroup key={group} heading={group}>
+              {items.map((item) => (
                 <CommandItem
-                  key={navItem.href}
-                  value={navItem.title}
+                  key={item.href}
+                  value={item.title}
                   onSelect={() => {
-                    runCommand(() => router.push(navItem.href as string))
+                    runCommand(() => router.push(item.href as string))
                   }}
                 >
                   <FileIcon className="mr-2 h-4 w-4" />
-                  {navItem.title}
+                  {item.title}
+                  {item.label && (
+                    <span className="ml-2 rounded-md bg-muted px-1.5 py-0.5 text-xs font-medium text-muted-foreground">
+                      {item.label}
+                    </span>
+                  )}
                 </CommandItem>
               ))}
-          </CommandGroup>
-          {docsConfig.sidebarNav.map((group) => (
-            <CommandGroup key={group.title} heading={group.title}>
-              {renderItems(group.items)}
             </CommandGroup>
           ))}
           <CommandSeparator />

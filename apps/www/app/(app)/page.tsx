@@ -7,6 +7,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Announcement } from "@/components/announcement"
 import { FadeIn } from "@/components/fade-in"
+import ParticlesButton from '@/registry/default/ui/particle-button';
 import {
   Icons,
   ReactIcon,
@@ -65,8 +66,8 @@ export default function IndexPage() {
             </FadeIn>
             <FadeIn>
               <PageActions>
-                <Link href="/docs" className={cn(buttonVariants(), "rounded-full")}>
-                  Get Started
+                <Link href="/docs">
+                  <ParticlesButton className="rounded-full">Get Started</ParticlesButton>
                 </Link>
                 <Link
                   target="_blank"

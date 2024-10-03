@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
-import { Icons } from "@/components/icons"
+import { Icons, ReactIcon } from "@/components/icons"
 import Image from "next/image"
 
 export function MainNav() {
@@ -15,7 +15,9 @@ export function MainNav() {
   return (
     <div className="mr-4 hidden md:flex ">
       <Link href="/" className="mr-6 flex items-center space-x-2">
-        <Image src="/glassui.png" alt="Glass UI" width={20} height={20} />
+        <div className="hidden rounded-md border border-black/10 p-1 shadow-lg md:block">
+          <Image src="/glassui.png" alt="Glass UI" width={16} height={16} />
+        </div>
         <span className="hidden text-lg font-bold sm:inline-block">
           Glass UI
         </span>

@@ -89,7 +89,7 @@ const ParticleButton: React.FC<ParticleButtonProps> = ({
 
   return (
     <motion.button
-      className={`relative overflow-hidden rounded-lg px-6 py-3 font-medium text-sm uppercase tracking-wider transition-all duration-300 ease-in-out ${className}`}
+      className={`relative overflow-hidden rounded-lg px-4 py-2 font-medium text-sm uppercase tracking-wider transition-all duration-300 ease-in-out ${className}`}
       style={{
         background: 'rgba(255, 255, 255, 0.8)',
         backdropFilter: 'blur(10px)',
