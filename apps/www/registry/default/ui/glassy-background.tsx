@@ -40,7 +40,7 @@ const AnimatedShape = ({ size, position, color, shape }: AnimatedShapeProps) => 
   />
 )
 
-export default function GlassyBackgroundre({ children }: GlassyBackgroundProps) {
+export default function GlassyBackground({ children }: GlassyBackgroundProps) {
   const [shapes, setShapes] = useState<Shape[]>([])
 
   useEffect(() => {

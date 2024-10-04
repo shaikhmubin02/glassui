@@ -115,6 +115,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "glassy-background": {
+      name: "glassy-background",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/glassy-background")),
+      source: "",
+      files: ["registry/default/ui/glassy-background.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "minimal-card-demo": {
       name: "minimal-card-demo",
       type: "components:example",
@@ -221,6 +232,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/network-background-demo")),
       source: "",
       files: ["registry/default/example/network-background-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "glassy-background-demo": {
+      name: "glassy-background-demo",
+      type: "components:example",
+      registryDependencies: ["glassy-background"],
+      component: React.lazy(() => import("@/registry/default/example/glassy-background-demo")),
+      source: "",
+      files: ["registry/default/example/glassy-background-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

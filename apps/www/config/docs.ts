@@ -96,6 +96,11 @@ export const docsConfig: DocsConfig = {
               href: "/docs/components/network-background",
               items: [],
             },
+            {
+              title: "Glassy Background",
+              href: "/docs/components/glassy-bg",
+              items: [],
+            },
           ],
         },
       ],

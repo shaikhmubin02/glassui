@@ -61,4 +61,10 @@ export const examples: Registry = [
     registryDependencies: ["network-background"],
     files: ["example/network-background-demo.tsx"],
   },
+  {
+    name: "glassy-background-demo",
+    type: "components:example",
+    registryDependencies: ["glassy-background"],
+    files: ["example/glassy-background-demo.tsx"],
+  },
 ]

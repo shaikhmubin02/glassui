@@ -1,0 +1,75 @@
+---
+title: Glassy Background
+description: A dynamic background component with animated shapes and a glass-like effect
+component: true
+links:
+---
+
+<ComponentPreview
+  name="glassy-background-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Glassy Background Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="glassy-background" />
+
+<Step>Create a new file named `glassy-background.tsx` in your components directory. You can place it in a subdirectory like `ui` or `glassui` if you prefer to organize your components.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import GlassyBackground from "@/components/glassui/glassy-background"
+```
+
+```tsx
+export default function GlassyBackgroundDemo() {
+  return (
+    <GlassyBackground>
+      <div className="relative z-10 flex min-h-screen items-center justify-center text-black dark:text-white">
+        <div className="rounded-lg bg-white bg-opacity-20 p-8 backdrop-blur-md">
+          <h1 className="flex items-center justify-center mb-8 text-2xl font-semibold">Glassy Background</h1>
+          <div className="space-y-4">
+            <p className="italic">"In the game of glassy UIs, you design or you crash."</p>
+            <p className="italic">"A Lannister always pays his UI debts."</p>
+            <p className="italic">"Winter is coming... and so is our new transparent interface."</p>
+          </div>
+        </div>
+      </div>
+    </GlassyBackground>
+  )
+}
+```
+
+## Props
+
+The `GlassyBackground` component accepts the following prop:
+
+- `children` (ReactNode): The content to be displayed on top of the glassy background.
+
+## Features
+
+- Dynamic animated shapes with random sizes, positions, and colors
+- Smooth animations for floating, pulsing, and rotating effects
+- Gradient background with adjustable opacity
+- Backdrop blur effect for a glass-like appearance
+- Responsive design that adapts to different screen sizes

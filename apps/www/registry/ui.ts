@@ -61,4 +61,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/network-background.tsx"],
   },
+  {
+    name: "glassy-background",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/glassy-background.tsx"],
+  },
 ]
