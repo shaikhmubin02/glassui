@@ -135,10 +135,10 @@ export function CommandMenu({ ...props }: DialogProps) {
               <MoonIcon className="mr-2 h-4 w-4" />
               Dark
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
+            {/* <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
               <LaptopIcon className="mr-2 h-4 w-4" />
               System
-            </CommandItem>
+            </CommandItem> */}
           </CommandGroup>
         </CommandList>
       </CommandDialog>
