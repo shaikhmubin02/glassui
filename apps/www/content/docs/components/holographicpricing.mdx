@@ -1,0 +1,72 @@
+---
+title: Holographic Pricing
+description: A stylish holographic pricing component with 3D card effects
+component: true
+---
+
+<ComponentPreview
+  name="holographicpricing-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[100%]"
+  description="Holographic Pricing Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="holographicpricing" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import HolographicPricing from "@/components/ui/holographicpricing"
+```
+
+```tsx
+export default function HolographicPricingDemo() {
+  return (
+    <HolographicPricing />
+  )
+}
+```
+
+## Component Details
+
+The `HolographicPricing` component is a stylish pricing section with 3D card effects. It includes:
+
+- A background lamp effect
+- Three pricing tiers: Hobby, Pro Plan, and Unlimited
+- 3D card containers with hover effects
+- Pricing details and feature lists for each tier
+- Call-to-action buttons
+
+This component uses the following sub-components:
+
+- `LampComponent`: Creates the background lamp effect
+- `CardContainer`, `CardBody`, `CardItem`: Provide the 3D card functionality
+
+The component is responsive and adjusts its layout for different screen sizes.
+
+## Customization
+
+To customize the pricing tiers, features, or styling, you can modify the content within each `CardBody` component. The `CardItem` components are used to create the 3D effect for different elements within the card.
+
+You can adjust the colors, text, and layout by modifying the className props and the content of each card.

@@ -109,4 +109,10 @@ export const examples: Registry = [
     registryDependencies: ["premiumglass"],
     files: ["example/premiumglass-demo.tsx"],
   },
+  {
+    name: "holographicpricing-demo",
+    type: "components:example",
+    registryDependencies: ["holographicpricing"],
+    files: ["example/holographicpricing-demo.tsx"],
+  },
 ]

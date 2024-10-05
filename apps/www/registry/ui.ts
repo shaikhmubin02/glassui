@@ -109,4 +109,10 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/premiumglass.tsx"],
   },
+  {
+    name: "holographicpricing",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/holographicpricing.tsx"],
+  },
 ]

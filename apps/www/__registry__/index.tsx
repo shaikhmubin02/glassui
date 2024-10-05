@@ -192,6 +192,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "holographicpricing": {
+      name: "holographicpricing",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/holographicpricing")),
+      source: "",
+      files: ["registry/default/ui/holographicpricing.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "particle-background": {
       name: "particle-background",
       type: "components:ui",
@@ -210,6 +221,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/minimal-card-demo")),
       source: "",
       files: ["registry/default/example/minimal-card-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "holographicpricing-demo": {
+      name: "holographicpricing-demo",
+      type: "components:example",
+      registryDependencies: ["holographicpricing"],
+      component: React.lazy(() => import("@/registry/default/example/holographicpricing-demo")),
+      source: "",
+      files: ["registry/default/example/holographicpricing-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

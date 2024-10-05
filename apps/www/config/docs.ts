@@ -48,7 +48,6 @@ export const docsConfig: DocsConfig = {
               title: "Magical Button",
               href: "/docs/components/magical-button",
               items: [],
-              label: "new",
             },
             {
               title: "Slide Button",
@@ -105,6 +104,12 @@ export const docsConfig: DocsConfig = {
               title: "Premium Glass",
               href: "/docs/components/premiumglass",
               items: [],
+            },
+            {
+              title: "Holographic",
+              href: "/docs/components/holographicpricing",
+              items: [],
+              label: "new",
             },
           ],
         },
