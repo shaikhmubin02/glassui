@@ -103,4 +103,10 @@ export const ui: Registry = [
     dependencies: ["react-particles"],
     files: ["ui/particle-background.tsx"],
   },
+  {
+    name: "premiumglass",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/premiumglass.tsx"],
+  },
 ]

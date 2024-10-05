@@ -103,4 +103,10 @@ export const examples: Registry = [
     registryDependencies: ["particle-background"],
     files: ["example/particle-background-demo.tsx"],
   },
+  {
+    name: "premiumglass-demo",
+    type: "components:example",
+    registryDependencies: ["premiumglass"],
+    files: ["example/premiumglass-demo.tsx"],
+  },
 ]
