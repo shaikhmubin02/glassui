@@ -101,6 +101,22 @@ export const docsConfig: DocsConfig = {
               href: "/docs/components/glassy-bg",
               items: [],
             },
+            {
+              title: "Animated Grid",
+              href: "/docs/components/animatedgrid",
+              items: [],
+            },
+            {
+              title: "Animated Network",
+              href: "/docs/components/animatednetwork",
+              items: [],
+              label:"new",
+            },
+            {
+              title: "Grid Pattern",
+              href: "/docs/components/gridpattern",
+              items: [],
+            },
           ],
         },
       ],

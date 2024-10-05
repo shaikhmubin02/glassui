@@ -1,12 +1,15 @@
+import React from "react";
+import EnhancedDotBackground from "@/components/testing";
 
-import React from 'react'
-import Testing from '@/components/testing'
-
-
-const page = () => {
+const HomePage: React.FC = () => {
   return (
-    <Testing />
-  )
-}
+    <div className="relative h-screen w-full">
+      <EnhancedDotBackground />
+      <h1 className='absolute inset-0 flex items-center justify-center text-4xl font-bold text-black z-10 pointer-events-none dark:text-white'>
+        Fuck Microsoft Fuck
+      </h1>
+    </div>
+  );
+};
 
-export default page
+export default HomePage;

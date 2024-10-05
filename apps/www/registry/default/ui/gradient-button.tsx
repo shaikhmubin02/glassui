@@ -1,8 +1,9 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+
+import { cn } from "@/lib/utils"
 
 export default function GradientButton({
   children,
@@ -12,12 +13,12 @@ export default function GradientButton({
   ...props
 }: React.PropsWithChildren<
   {
-    as?: React.ElementType;
-    containerClassName?: string;
-    className?: string;
+    as?: React.ElementType
+    containerClassName?: string
+    className?: string
   } & React.HTMLAttributes<HTMLElement>
 >) {
-  const [hovered, setHovered] = useState<boolean>(false);
+  const [hovered, setHovered] = useState<boolean>(false)
 
   const rainbowColors = [
     "#FF1493", // Deep Pink
@@ -26,9 +27,9 @@ export default function GradientButton({
     "#00FA9A", // Medium Spring Green
     "#1E90FF", // Dodger Blue
     "#9400D3", // Dark Violet
-  ];
+  ]
 
-  const staticGradient = `linear-gradient(45deg, ${rainbowColors.join(', ')})`;
+  const staticGradient = `linear-gradient(45deg, ${rainbowColors.join(", ")})`
 
   return (
     <Tag
@@ -64,5 +65,5 @@ export default function GradientButton({
         {children}
       </div>
     </Tag>
-  );
+  )
 }

@@ -61,5 +61,85 @@
       "ui/slider-button.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "remove-button",
+    "dependencies": [
+      "shadcn"
+    ],
+    "files": [
+      "ui/remove-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "gradient-button",
+    "dependencies": [
+      "shadcn"
+    ],
+    "files": [
+      "ui/gradient-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "particle-button",
+    "dependencies": [
+      "shadcn"
+    ],
+    "files": [
+      "ui/particle-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "network-background",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/network-background.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "glassy-background",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/glassy-background.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animatedgrid",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/animatedgrid.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animatednetwork",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/animatednetwork.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "gridpattern",
+    "dependencies": [
+      "framer-motion"
+    ],
+    "files": [
+      "ui/gridpattern.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

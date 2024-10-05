@@ -1,0 +1,67 @@
+---
+title: Animated Grid
+description: An interactive grid pattern with animated hover effects
+component: true
+links:
+---
+
+<ComponentPreview
+  name="animatedgrid-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Animated Grid Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="animatedgrid" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import AnimatedGrid from "@/components/ui/animatedgrid"
+```
+
+```tsx
+export default function AnimatedGridDemo() {
+  return (
+    <div className="relative h-screen w-full">
+      <AnimatedGrid className="z-0" />
+      <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-black z-10 pointer-events-none dark:text-white">
+         {/* Your content here */}
+    </div>
+  )
+}
+```
+
+## Props
+
+The `AnimatedGrid` component accepts the following props:
+
+- `width` (number, optional): The width of each grid cell. Default is 40.
+- `height` (number, optional): The height of each grid cell. Default is 40.
+- `x` (number, optional): The x-offset of the grid pattern. Default is 0.
+- `y` (number, optional): The y-offset of the grid pattern. Default is 0.
+- `strokeWidth` (number, optional): The width of the grid lines. Default is 1.
+- `className` (string, optional): Additional CSS classes to apply to the component.
+
+You can also pass any additional props that are valid for an SVG element.

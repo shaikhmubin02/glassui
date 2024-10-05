@@ -1,0 +1,68 @@
+---
+title: Grid Pattern
+description: A customizable grid pattern component for creating background effects
+component: true
+links:
+---
+
+<ComponentPreview
+  name="gridpattern-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Grid Pattern Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="gridpattern" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import GridPattern from "@/components/ui/gridpattern"
+```
+
+```tsx
+export default function GridPatternDemo() {
+  return (
+    <div className="relative h-screen w-full">
+      <GridPattern />
+      <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-black z-10 pointer-events-none dark:text-white">
+         {/* Your content here */}
+      </div>
+    </div>
+  )
+}
+```
+
+## Props
+
+The `GridPattern` component accepts the following props:
+
+- `width` (number, optional): The width of each grid cell. Default is 40.
+- `height` (number, optional): The height of each grid cell. Default is 40.
+- `x` (number, optional): The x-offset of the grid. Default is 0.
+- `y` (number, optional): The y-offset of the grid. Default is 0.
+- `strokeWidth` (number, optional): The width of the grid lines. Default is 1.
+- `className` (string, optional): Additional CSS classes to apply to the component.
+
+You can also pass any additional SVG attributes as props to the component.

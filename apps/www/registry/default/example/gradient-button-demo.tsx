@@ -1,12 +1,14 @@
-import Image from 'next/image'
-import React from 'react'
-import GradientButton from '../ui/gradient-button'
-import { Card } from '@/components/ui/card'
+import React from "react"
+import Image from "next/image"
+
+import { Card } from "@/components/ui/card"
+
+import GradientButton from "../ui/gradient-button"
 
 const page = () => {
   return (
-    <Card className='relative w-full h-[300px] shadow-md dark:bg-gray-950 dark:text-white'>
-      <div className='flex justify-center items-center h-full'>
+    <Card className="relative w-full h-[300px] shadow-md dark:bg-gray-950 dark:text-white">
+      <div className="flex justify-center items-center h-full">
         <GradientButton
           containerClassName="rounded-full"
           as="button"

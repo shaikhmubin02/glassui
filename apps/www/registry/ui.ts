@@ -67,4 +67,22 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/glassy-background.tsx"],
   },
+  {
+    name: "animatedgrid",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/animatedgrid.tsx"],
+  },
+  {
+    name: "animatednetwork",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/animatednetwork.tsx"],
+  },
+  {
+    name: "gridpattern",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/gridpattern.tsx"],
+  },
 ]

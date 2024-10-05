@@ -1,0 +1,79 @@
+---
+title: Animated Network
+description: An interactive animated network background with responsive dots and connections
+component: true
+links:
+---
+
+<ComponentPreview
+  name="animatednetwork-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Animated Network Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="animatednetwork" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import AnimatedNetwork from "@/components/ui/animatednetwork"
+```
+
+```tsx
+export default function AnimatedNetworkDemo() {
+  return (
+    <div className="relative h-screen w-full">
+      <AnimatedNetwork />
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        {/* Your content here */}
+      </div>
+    </div>
+  )
+}
+```
+
+## Features
+
+The `AnimatedNetwork` component provides the following features:
+
+- Responsive canvas that adjusts to window size
+- Interactive dots that respond to mouse movement
+- Dynamic connections between dots
+- Theme-aware coloring (light and dark mode support)
+- Subtle pulsing effect on dots
+
+## Customization
+
+You can customize the `AnimatedNetwork` component by modifying the following variables in the component:
+
+- `dotCount`: Number of dots in the network
+- `moveRadius`: Radius of influence for mouse interaction
+- `connectionDistance`: Maximum distance for drawing connections between dots
+- `lightColors` and `darkColors`: Arrays of colors for light and dark themes
+
+## Notes
+
+- The component uses the `useTheme` hook from `next-themes` for theme awareness. Make sure to set up your theme provider accordingly.
+- The canvas is set to `z-0`, allowing you to place content on top of it using higher z-index values.

@@ -1,0 +1,13 @@
+{
+  "name": "glassy-background",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "name": "glassy-background.tsx",
+      "content": "\"use client\"\r\n\r\nimport React, { ReactNode, useEffect, useState } from \"react\"\r\n\r\ninterface GlassyBackgroundProps {\r\n  children: ReactNode\r\n}\r\n\r\ninterface Shape {\r\n  size: number;\r\n  position: { x: number; y: number };\r\n  color: string;\r\n  shape: string;\r\n}\r\n\r\ntype AnimatedShapeProps = {\r\n  size: number;\r\n  position: { x: number; y: number };\r\n  color: string;\r\n  shape: 'circle' | 'square'; // Adjust these options as needed\r\n};\r\n\r\nconst AnimatedShape = ({ size, position, color, shape }: AnimatedShapeProps) => (\r\n  <div\r\n    className={`absolute mix-blend-multiply filter blur-lg animate-combined ${\r\n      shape === 'circle' ? 'rounded-full' : 'rounded-md'\r\n    }`}\r\n    style={{\r\n      width: `${size}px`,\r\n      height: `${size}px`,\r\n      left: `${position.x}%`,\r\n      top: `${position.y}%`,\r\n      backgroundColor: color,\r\n      animation: `\r\n        float ${Math.random() * 10 + 10}s ease-in-out infinite,\r\n        pulse ${Math.random() * 4 + 2}s ease-in-out infinite alternate,\r\n        rotate ${Math.random() * 20 + 20}s linear infinite\r\n      `,\r\n    }}\r\n  />\r\n)\r\n\r\nexport default function GlassyBackground({ children }: GlassyBackgroundProps) {\r\n  const [shapes, setShapes] = useState<Shape[]>([])\r\n\r\n  useEffect(() => {\r\n    const colors = ['#FF595E', '#FFCA3A', '#8AC926', '#1982C4', '#6A4C93', '#FF9E00', '#8F00FF']\r\n    const newShapes = Array.from({ length: 20 }, () => ({\r\n      size: Math.random() * 150 + 50,\r\n      position: { x: Math.random() * 100, y: Math.random() * 100 },\r\n      color: colors[Math.floor(Math.random() * colors.length)],\r\n      shape: Math.random() > 0.5 ? 'circle' : 'square',\r\n    }))\r\n    setShapes(newShapes)\r\n  }, [])\r\n\r\n  return (\r\n    <div className=\"relative min-h-screen w-full overflow-hidden bg-white dark:bg-gray-900\">\r\n      {/* Animated glassy background */}\r\n      <div className=\"absolute inset-0\">\r\n        <div className=\"absolute inset-0 bg-gradient-to-r from-red-500 via-yellow-500 to-violet-500 opacity-30 animate-gradient-x\" />\r\n        {shapes.map((shape, index) => (\r\n          <AnimatedShape key={index} {...shape as AnimatedShapeProps} />\r\n        ))}\r\n        <div className=\"absolute inset-0 backdrop-blur-xl\" />\r\n      </div>\r\n\r\n      {/* Content */}\r\n      {children}\r\n    </div>\r\n  )\r\n}"
+    }
+  ],
+  "type": "components:ui"
+}

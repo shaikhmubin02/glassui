@@ -1,0 +1,13 @@
+{
+  "name": "gradient-button",
+  "dependencies": [
+    "shadcn"
+  ],
+  "files": [
+    {
+      "name": "gradient-button.tsx",
+      "content": "\"use client\";\r\n\r\nimport React, { useState } from \"react\";\r\nimport { motion } from \"framer-motion\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport default function GradientButton({\r\n  children,\r\n  containerClassName,\r\n  className,\r\n  as: Tag = \"button\",\r\n  ...props\r\n}: React.PropsWithChildren<\r\n  {\r\n    as?: React.ElementType;\r\n    containerClassName?: string;\r\n    className?: string;\r\n  } & React.HTMLAttributes<HTMLElement>\r\n>) {\r\n  const [hovered, setHovered] = useState<boolean>(false);\r\n\r\n  const rainbowColors = [\r\n    \"#FF1493\", // Deep Pink\r\n    \"#FF4500\", // Orange Red\r\n    \"#FFD700\", // Gold\r\n    \"#00FA9A\", // Medium Spring Green\r\n    \"#1E90FF\", // Dodger Blue\r\n    \"#9400D3\", // Dark Violet\r\n  ];\r\n\r\n  const staticGradient = `linear-gradient(45deg, ${rainbowColors.join(', ')})`;\r\n\r\n  return (\r\n    <Tag\r\n      onMouseEnter={() => setHovered(true)}\r\n      onMouseLeave={() => setHovered(false)}\r\n      className={cn(\r\n        \"relative flex rounded-full border-none content-center bg-transparent items-center flex-col flex-nowrap h-min justify-center overflow-visible p-[2px] decoration-clone w-fit\",\r\n        \"transition-all duration-300 ease-in-out transform hover:scale-103\",\r\n        \"shadow-md hover:shadow-lg\",\r\n        containerClassName\r\n      )}\r\n      {...props}\r\n    >\r\n      <motion.div\r\n        className=\"absolute inset-0 rounded-full z-0\"\r\n        style={{\r\n          background: staticGradient,\r\n        }}\r\n        initial={{ opacity: 0.7 }}\r\n        animate={{\r\n          opacity: hovered ? 1 : 0.7,\r\n        }}\r\n        transition={{ duration: 0.3 }}\r\n      />\r\n      <div\r\n        className={cn(\r\n          \"relative z-10 bg-black bg-opacity-90 text-white px-4 py-2 rounded-full text-sm\",\r\n          \"transition-all duration-300 ease-in-out\",\r\n          \"backdrop-filter backdrop-blur-sm\",\r\n          className\r\n        )}\r\n      >\r\n        {children}\r\n      </div>\r\n    </Tag>\r\n  );\r\n}\r\n"
+    }
+  ],
+  "type": "components:ui"
+}

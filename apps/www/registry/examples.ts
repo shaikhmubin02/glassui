@@ -67,4 +67,22 @@ export const examples: Registry = [
     registryDependencies: ["glassy-background"],
     files: ["example/glassy-background-demo.tsx"],
   },
+  {
+    name: "animatedgrid-demo",
+    type: "components:example",
+    registryDependencies: ["animatedgrid"],
+    files: ["example/animatedgrid-demo.tsx"],
+  },
+  {
+    name: "animatednetwork-demo",
+    type: "components:example",
+    registryDependencies: ["animatednetwork"],
+    files: ["example/animatednetwork-demo.tsx"],
+  },
+  {
+    name: "gridpattern-demo",
+    type: "components:example",
+    registryDependencies: ["gridpattern"],
+    files: ["example/gridpattern-demo.tsx"],
+  },
 ]

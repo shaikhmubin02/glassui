@@ -1,7 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
+import { CheckCircle, Loader2, X } from "lucide-react"
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -13,7 +14,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import { X, Loader2, CheckCircle } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { toast } from "@/components/ui/use-toast"
 
 export default function RemoveButton() {

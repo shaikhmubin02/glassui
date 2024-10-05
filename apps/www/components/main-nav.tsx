@@ -21,7 +21,7 @@ export function MainNav() {
         <span className="hidden text-lg font-bold sm:inline-block">
           Glass UI
         </span>
-        <Badge variant="secondary" className="ml-2 text-xs px-1 py-0 h-4 w-8 mt-0.5 bg-gray-300 rounded-sm">Beta</Badge>
+        <Badge variant="secondary" className="ml-2 text-xs px-1 py-0 h-4 w-8 mt-0.5 bg-gray-300 dark:bg-gray-800 rounded-sm">Beta</Badge>
       </Link>
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         <Link

@@ -140,7 +140,7 @@ export function SiteHeader() {
                   <span className="sr-only">Twitter</span>
                 </div>
               </Link>
-              
+              {pathname?.includes("/testing") ? (<ModeToggle />): null }
               {pathname?.includes("/docs") ? (
                 <>
                   <Dialog>

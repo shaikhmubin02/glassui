@@ -126,6 +126,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "animatedgrid": {
+      name: "animatedgrid",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/animatedgrid")),
+      source: "",
+      files: ["registry/default/ui/animatedgrid.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "animatednetwork": {
+      name: "animatednetwork",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/animatednetwork")),
+      source: "",
+      files: ["registry/default/ui/animatednetwork.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "gridpattern": {
+      name: "gridpattern",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/gridpattern")),
+      source: "",
+      files: ["registry/default/ui/gridpattern.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "minimal-card-demo": {
       name: "minimal-card-demo",
       type: "components:example",
@@ -247,5 +280,38 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-  }
+    "animatedgrid-demo": {
+      name: "animatedgrid-demo",
+      type: "components:example",
+      registryDependencies: ["animatedgrid"],
+      component: React.lazy(() => import("@/registry/default/example/animatedgrid-demo")),
+      source: "",
+      files: ["registry/default/example/animatedgrid-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "animatednetwork-demo": {
+      name: "animatednetwork-demo",
+      type: "components:example",
+      registryDependencies: ["animatednetwork"],
+      component: React.lazy(() => import("@/registry/default/example/animatednetwork-demo")),
+      source: "",
+      files: ["registry/default/example/animatednetwork-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "gridpattern-demo": {
+      name: "gridpattern-demo",
+      type: "components:example",
+      registryDependencies: ["gridpattern"],
+      component: React.lazy(() => import("@/registry/default/example/gridpattern-demo")),
+      source: "",
+      files: ["registry/default/example/gridpattern-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+  },
 }
