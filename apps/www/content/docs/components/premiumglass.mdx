@@ -1,0 +1,79 @@
+---
+title: Premium Glass
+description: A stylish pricing component with glass morphism effect and animations
+component: true
+---
+
+<ComponentPreview
+  name="premiumglass-demo"
+  className="[&_.preview]:min-h-[700px]"
+/>
+
+## Features
+
+- Glass morphism effect with backdrop filter
+- Animated pricing cards with Framer Motion
+- Responsive design (grid layout for larger screens)
+- Bokeh background effect
+- Gradient text and button styles
+- Custom font integration (Playfair Display and Roboto)
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="premiumglass" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import PremiumGlass from "@/components/ui/premiumglass"
+```
+
+```tsx
+export default function PremiumGlassDemo() {
+  return (
+    <div className="w-full h-[700px]">
+      <PremiumGlass />
+    </div>
+  )
+}
+```
+
+## Customization
+
+The `PremiumGlass` component can be customized by modifying the `features` array in the component file. Each object in the array represents a pricing tier with the following properties:
+
+- `name` (string): The name of the pricing tier
+- `price` (string): The price of the tier
+- `items` (string[]): An array of features included in the tier
+
+Example:
+
+```tsx
+const features = [
+  { name: "Basic", price: "49", items: ["Core Features", "Email Support", "1 User"] },
+  { name: "Pro", price: "99", items: ["All Basic Features", "Priority Support", "5 Users", "Analytics"] },
+  { name: "Enterprise", price: "299", items: ["All Pro Features", "24/7 Support", "Unlimited Users", "Custom Integration"] },
+]
+```
+
+You can also adjust the styling by modifying the CSS in the `<style>` tag within the component.

@@ -1,0 +1,76 @@
+---
+title: Particle Background
+description: A dynamic background with animated particles that adapts to light and dark themes
+component: true
+links:
+---
+
+<ComponentPreview
+  name="particle-background-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Particle Background Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="particle-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import ParticleBackground from "@/components/ui/particle-background"
+```
+
+```tsx
+export default function ParticleBackgroundDemo() {
+  return (
+    <ParticleBackground />
+      {/* Your content goes here */}
+      <h1>Glass UI</h1>
+  )
+}
+```
+
+## Props
+
+The `ParticleBackground` component accepts the following props:
+
+- `children` (React.ReactNode): The content to be displayed on top of the particle background.
+- `particleCount` (number, optional): The number of particles to render. Default is 100.
+- `lightModeColors` (string[], optional): An array of colors for particles in light mode. Default is `["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A", "#98D8C8"]`.
+- `darkModeColors` (string[], optional): An array of colors for particles in dark mode. Default is `["#FFD700", "#FF69B4", "#00CED1", "#FF6347", "#32CD32"]`.
+
+## Customization
+
+You can customize the appearance of the Particle Background by adjusting the props:
+
+```tsx
+<ParticleBackground 
+  particleCount={150}
+  lightModeColors={["#FF0000", "#00FF00", "#0000FF"]}
+  darkModeColors={["#800000", "#008000", "#000080"]}
+/>
+  {/* Your content */}
+```
+
+This example increases the particle count to 150 and uses custom colors for light and dark modes.

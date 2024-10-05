@@ -85,4 +85,22 @@ export const ui: Registry = [
     dependencies: ["framer-motion"],
     files: ["ui/gridpattern.tsx"],
   },
+  {
+    name: "luxuriouscrystal",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/luxuriouscrystal.tsx"],
+  },
+  {
+    name: "iridescent-button",
+    type: "components:ui",
+    dependencies: ["framer-motion"],
+    files: ["ui/iridescent-button.tsx"],
+  },
+  {
+    name: "particle-background",
+    type: "components:ui",
+    dependencies: ["react-particles"],
+    files: ["ui/particle-background.tsx"],
+  },
 ]

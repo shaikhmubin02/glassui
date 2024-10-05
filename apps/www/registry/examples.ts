@@ -85,4 +85,22 @@ export const examples: Registry = [
     registryDependencies: ["gridpattern"],
     files: ["example/gridpattern-demo.tsx"],
   },
+  {
+    name: "luxuriouscrystal-demo",
+    type: "components:example",
+    registryDependencies: ["luxuriouscrystal"],
+    files: ["example/luxuriouscrystal-demo.tsx"],
+  },
+  {
+    name: "iridescent-button-demo",
+    type: "components:example",
+    registryDependencies: ["iridescent-button"],
+    files: ["example/iridescent-button-demo.tsx"],
+  },
+  {
+    name: "particle-background-demo",
+    type: "components:example",
+    registryDependencies: ["particle-background"],
+    files: ["example/particle-background-demo.tsx"],
+  },
 ]

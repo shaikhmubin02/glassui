@@ -64,7 +64,6 @@ export const docsConfig: DocsConfig = {
               title: "Particle Button",
               href: "/docs/components/particle-button",
               items: [],
-              label: "new",
             },
             {
               title: "Slider Button",
@@ -76,6 +75,12 @@ export const docsConfig: DocsConfig = {
               href: "/docs/components/gradient-button",
               items: [],
             },
+            {
+              title: "Iridescent Button",
+              href: "/docs/components/iridescent-button",
+              items: [],
+              label: "new",
+            },
           ],
         },
         {
@@ -84,6 +89,21 @@ export const docsConfig: DocsConfig = {
             {
               title: "3D Carousel",
               href: "/docs/components/three-d-carousel",
+              items: [],
+            },
+          ],
+        },
+        {
+          title: "Pricing",
+          items: [
+            {
+              title: "Luxurious Crystal",
+              href: "/docs/components/luxuriouscrystal",
+              items: [],
+            },
+            {
+              title: "Premium Glass",
+              href: "/docs/components/premiumglass",
               items: [],
             },
           ],
@@ -111,6 +131,11 @@ export const docsConfig: DocsConfig = {
               href: "/docs/components/animatednetwork",
               items: [],
               label:"new",
+            },
+            {
+              title: "Particle Background",
+              href: "/docs/components/particle-background",
+              items: [],
             },
             {
               title: "Grid Pattern",

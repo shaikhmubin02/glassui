@@ -13,14 +13,12 @@ interface Particle {
 }
 
 interface ParticleBackgroundProps {
-  children: React.ReactNode
   particleCount?: number
   lightModeColors?: string[]
   darkModeColors?: string[]
 }
 
 const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
-  children,
   particleCount = 100,
   lightModeColors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A", "#98D8C8"],
   darkModeColors = ["#FFD700", "#FF69B4", "#00CED1", "#FF6347", "#32CD32"],
@@ -90,14 +88,11 @@ const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
   }, [particleCount, lightModeColors, darkModeColors, theme])
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ mixBlendMode: theme === "dark" ? "screen" : "multiply" }}
-      />
-      <div className="relative z-10">{children}</div>
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full"
+      style={{ mixBlendMode: theme === "dark" ? "screen" : "multiply" }}
+    />
   )
 }
 

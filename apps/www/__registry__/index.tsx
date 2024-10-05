@@ -159,6 +159,50 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "luxuriouscrystal": {
+      name: "luxuriouscrystal",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/luxuriouscrystal")),
+      source: "",
+      files: ["registry/default/ui/luxuriouscrystal.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iridescent-button": {
+      name: "iridescent-button",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/iridescent-button")),
+      source: "",
+      files: ["registry/default/ui/iridescent-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "premiumglass": {
+      name: "premiumglass",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/premiumglass")),
+      source: "",
+      files: ["registry/default/ui/premiumglass.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "particle-background": {
+      name: "particle-background",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/particle-background")),
+      source: "",
+      files: ["registry/default/ui/particle-background.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "minimal-card-demo": {
       name: "minimal-card-demo",
       type: "components:example",
@@ -166,6 +210,50 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/minimal-card-demo")),
       source: "",
       files: ["registry/default/example/minimal-card-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "particle-background-demo": {
+      name: "particle-background-demo",
+      type: "components:example",
+      registryDependencies: ["particle-background"],
+      component: React.lazy(() => import("@/registry/default/example/particle-background-demo")),
+      source: "",
+      files: ["registry/default/example/particle-background-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "premiumglass-demo": {
+      name: "premiumglass-demo",
+      type: "components:example",
+      registryDependencies: ["premiumglass"],
+      component: React.lazy(() => import("@/registry/default/example/premiumglass-demo")),
+      source: "",
+      files: ["registry/default/example/premiumglass-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "luxuriouscrystal-demo": {
+      name: "luxuriouscrystal-demo",
+      type: "components:example",
+      registryDependencies: ["luxuriouscrystal"],
+      component: React.lazy(() => import("@/registry/default/example/luxuriouscrystal-demo")),
+      source: "",
+      files: ["registry/default/example/luxuriouscrystal-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iridescent-button-demo": {
+      name: "iridescent-button-demo",
+      type: "components:example",
+      registryDependencies: ["iridescent-button"],
+      component: React.lazy(() => import("@/registry/default/example/iridescent-button-demo")),
+      source: "",
+      files: ["registry/default/example/iridescent-button-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

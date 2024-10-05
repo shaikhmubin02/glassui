@@ -1,0 +1,56 @@
+---
+title: Luxurious Crystal Pricing
+description: A premium pricing component with luxurious design and animations
+component: true
+links:
+---
+
+<ComponentPreview
+  name="luxuriouscrystal-demo"
+  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
+  description="Luxurious Crystal Pricing Demo"
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="luxurious-crystal" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import LuxuriousCrystalPricing from "@/components/ui/luxuriouscrystal"
+```
+
+```tsx
+export default function LuxuriousCrystalDemo() {
+  return (
+    <div className="relative w-full h-[400px]">
+      <LuxuriousCrystalPricing />
+    </div>
+  )
+}
+```
+
+## Props
+
+The `LuxuriousCrystalPricing` component does not accept any props directly, but it uses internal data to render different pricing tiers.
